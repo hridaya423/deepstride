@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { AlertCircle } from 'lucide-react';
@@ -23,6 +23,13 @@ const ErrorMessage = ({ message }: { message: string }) => {
 }
 
 const LoadingAnimation = () => {
+  const [showTimeout, setShowTimeout] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setShowTimeout(true), 5000);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div className="flex flex-col items-center justify-center p-8">
       <div className="w-16 h-16 relative">
@@ -32,6 +39,11 @@ const LoadingAnimation = () => {
       <div className="mt-4 text-purple-600 font-medium animate-pulse">
         Crafting your learning path...
       </div>
+      {showTimeout && (
+        <div className="mt-2 text-sm text-purple-600">
+          This might take a little longer due to high demand
+        </div>
+      )}
     </div>
   );
 };
