@@ -41,7 +41,7 @@ const LoadingAnimation = () => {
       </div>
       {showTimeout && (
         <div className="mt-2 text-sm text-purple-600">
-          This might take a little longer due to high demand
+          This might take a little longer due to high demand, please retry if it fails
         </div>
       )}
     </div>
