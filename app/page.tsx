@@ -12,10 +12,8 @@ interface Step {
   resources: string[];
   estimatedTime: string;
 }
-
 export default function Home() {
   const [steps, setSteps] = useState<Step[]>([]);
-
   return (
     <main className="min-h-screen bg-gradient-to-br from-slate-50 via-purple-50 to-pink-50">
       <div className="absolute inset-0 bg-[url(/grid.svg)] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
