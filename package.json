@@ -14,7 +14,7 @@
     "clsx": "^2.1.1",
     "framer-motion": "^12.23.26",
     "groq-sdk": "^0.37.0",
-    "lucide-react": "^0.561.0",
+    "lucide-react": "^0.562.0",
     "next": "16.1.1",
     "react": "^19.2.1",
     "react-dom": "^19.2.3",
